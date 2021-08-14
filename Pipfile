@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+mysql-connector-python = "8.0.26"
+python-decouple = "3.4"
 
 [dev-packages]
 
