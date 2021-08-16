@@ -7,6 +7,7 @@ class MySQLClient:
     def __init__(self):
         self.host = config('DATABASE_HOST')
         self.database = config('DATABASE_NAME')
+        self.port = config('DATABASE_PORT')
         self.user = config('DATABASE_USERNAME')
         self.password = config('DATABASE_PASSWORD')
 
@@ -21,7 +22,7 @@ class MySQLClient:
             print(self.host, self.database, self.user, self.password)
             connection = mysql.connector.connect(host=self.host,
                                                  database=self.database,
-                                                 port=33060,
+                                                 port=self.port,
                                                  user=self.user,
                                                  password=self.password)
 
